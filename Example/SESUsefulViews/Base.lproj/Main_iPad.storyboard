@@ -1,27 +1,104 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5023" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SESViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="g7n-s0-ZSB"/>
+                        <viewControllerLayoutGuide type="bottom" id="rha-tM-Bn1"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="ssb-3Y-Gvj">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sky" translatesAutoresizingMaskIntoConstraints="NO" id="Yc9-zV-lHs">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bca-ND-MZx" customClass="SESGradientView">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="512"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sam" translatesAutoresizingMaskIntoConstraints="NO" id="Awy-bL-cFG" customClass="SESCircularImageView">
+                                <rect key="frame" x="264" y="392" width="240" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="bEn-OE-fTy"/>
+                                    <constraint firstAttribute="height" constant="240" id="pBs-eO-TKp"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Tr6-6D-SmI">
+                                <rect key="frame" x="325" y="815" width="118" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="0Ra-Te-U48"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="upperSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="RyM-mn-r2S"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="RC2-Yg-jhY">
+                                <rect key="frame" x="325" y="867" width="118" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="j4W-ix-bpG"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="lowerSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="yV7-AK-L3V"/>
+                                </connections>
+                            </slider>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="RC2-Yg-jhY" secondAttribute="centerX" id="2of-6N-WHH"/>
+                            <constraint firstItem="rha-tM-Bn1" firstAttribute="top" secondItem="RC2-Yg-jhY" secondAttribute="bottom" constant="127" id="4bf-nb-a08"/>
+                            <constraint firstAttribute="centerY" secondItem="Awy-bL-cFG" secondAttribute="centerY" id="81k-FL-PtI"/>
+                            <constraint firstAttribute="centerX" secondItem="Tr6-6D-SmI" secondAttribute="centerX" id="Msa-oR-MCt"/>
+                            <constraint firstItem="RC2-Yg-jhY" firstAttribute="top" secondItem="Tr6-6D-SmI" secondAttribute="bottom" constant="22" id="Mw7-Lu-YDd"/>
+                            <constraint firstItem="Yc9-zV-lHs" firstAttribute="top" secondItem="ssb-3Y-Gvj" secondAttribute="top" id="cBK-EO-Na4"/>
+                            <constraint firstAttribute="centerX" secondItem="Awy-bL-cFG" secondAttribute="centerX" id="drL-nx-keG"/>
+                            <constraint firstItem="Yc9-zV-lHs" firstAttribute="leading" secondItem="ssb-3Y-Gvj" secondAttribute="leading" id="g1i-Ow-aLe"/>
+                            <constraint firstItem="bca-ND-MZx" firstAttribute="leading" secondItem="ssb-3Y-Gvj" secondAttribute="leading" id="mNx-UZ-Nkt"/>
+                            <constraint firstAttribute="bottom" secondItem="Yc9-zV-lHs" secondAttribute="bottom" id="pjv-wq-Re4"/>
+                            <constraint firstAttribute="trailing" secondItem="Yc9-zV-lHs" secondAttribute="trailing" id="t15-xo-Af0"/>
+                            <constraint firstItem="Awy-bL-cFG" firstAttribute="centerY" secondItem="bca-ND-MZx" secondAttribute="bottom" id="tjI-Cs-JBm"/>
+                            <constraint firstItem="bca-ND-MZx" firstAttribute="top" secondItem="ssb-3Y-Gvj" secondAttribute="top" id="uh6-Yx-DL2"/>
+                            <constraint firstAttribute="trailing" secondItem="bca-ND-MZx" secondAttribute="trailing" id="x1k-uF-fYZ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="circularImage" destination="Awy-bL-cFG" id="PbS-cJ-BeR"/>
+                        <outlet property="gradientView" destination="bca-ND-MZx" id="YmO-j3-3Xg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-175" y="81"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sam" width="720" height="960"/>
+        <image name="sky" width="960" height="720"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

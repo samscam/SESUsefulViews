@@ -79,11 +79,11 @@
                             <constraint firstItem="mKt-Hb-lRm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="U3W-la-stY"/>
                             <constraint firstAttribute="centerX" secondItem="2Xf-Cf-mRX" secondAttribute="centerX" id="UtF-Cw-Vu8"/>
                             <constraint firstAttribute="trailing" secondItem="mKt-Hb-lRm" secondAttribute="trailing" id="g8W-HB-cHC"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="mKt-Hb-lRm" secondAttribute="bottom" id="gqZ-px-9UW"/>
                             <constraint firstAttribute="centerY" secondItem="CbF-ld-0DM" secondAttribute="centerY" id="hZB-Ni-mHw"/>
                             <constraint firstItem="dY4-tE-xmv" firstAttribute="top" secondItem="2Xf-Cf-mRX" secondAttribute="bottom" constant="22" id="mRe-UQ-ouJ"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="dY4-tE-xmv" secondAttribute="bottom" constant="30" id="qkn-LJ-iNB"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="dY4-tE-xmv" secondAttribute="bottom" constant="30" id="sKW-Qa-Ihx"/>
                             <constraint firstItem="zz8-ex-PYG" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="vfh-ZQ-kDW"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="mKt-Hb-lRm" secondAttribute="bottom" id="zJ4-WD-tmr"/>
                         </constraints>
                     </view>
                     <connections>
