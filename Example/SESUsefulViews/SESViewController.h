@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <SESUsefulViews/SESUsefulViews.h>
 
 @interface SESViewController : UIViewController
+
+@property (nonatomic,weak) IBOutlet SESGradientView *gradientView;
+@property (nonatomic,weak) IBOutlet SESCircularImageView *circularImage;
+
+- (IBAction)upperSliderValueChanged:(id)sender;
+- (IBAction)lowerSliderValueChanged:(id)sender;
 
 @end
