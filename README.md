@@ -1,5 +1,7 @@
 # SESUsefulViews
 
+_THIS IS A MESS - Sorry... I kinda forgot it was public..._
+
 [![CI Status](http://img.shields.io/travis/Sam Easterby-Smith/SESUsefulViews.svg?style=flat)](https://travis-ci.org/Sam Easterby-Smith/SESUsefulViews)
 [![Version](https://img.shields.io/cocoapods/v/SESUsefulViews.svg?style=flat)](http://cocoadocs.org/docsets/SESUsefulViews)
 [![License](https://img.shields.io/cocoapods/l/SESUsefulViews.svg?style=flat)](http://cocoadocs.org/docsets/SESUsefulViews)
@@ -15,16 +17,14 @@ In interfacebuilder you can also set values for the exposed properties of the vi
 
 ## Usage
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To run the example project, clone the repo, and run `pod install` from the Example directory first. *Except it won't work*
 
 ## Requirements
 
 ## Installation
 
-SESUsefulViews is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-    pod "SESUsefulViews"
+SESUsefulViews is *NOT YET* available through [CocoaPods](http://cocoapods.org).
+Meanwhile you can clone the source and copy the files from Pod/Classes into your project.
 
 ## Author
 
